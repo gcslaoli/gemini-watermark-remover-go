@@ -14,6 +14,8 @@ import (
 // go run main.go -in image.png -out image_unwatermarked.png
 // go run main.go -in nowater.jpg -out nowater_unwatermarked.png
 // go run main.go -in image2.png -out image2_unwatermarked.png
+// go run main.go -in image3.jpg -out image3_unwatermarked.png
+// go run main.go -in image4.jpg -out image4_unwatermarked.jpg
 
 func main() {
 	input := flag.String("in", "", "Path to the watermarked image (png/jpg/webp)")
@@ -59,6 +61,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "detect watermark: %v\n", err)
 		os.Exit(1)
 	}
+	fmt.Printf("Detected visible Gemini watermark (score %.2f) at %dx%d position %v.\n", score, info.Size, info.Size, info.Position)
 
 	if !present {
 		fmt.Printf("No visible Gemini watermark detected (score %.2f). Skipping removal.\n", score)

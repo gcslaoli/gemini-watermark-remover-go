@@ -8,7 +8,7 @@ import (
 	"image/png"
 )
 
-//go:embed assets/bg_48.png assets/bg_96.png
+//go:embed assets/bg_48.png assets/bg_64.png assets/bg_96.png
 var embeddedAssets embed.FS
 
 // decodeAlphaAsset loads the pre-captured watermark background and converts it

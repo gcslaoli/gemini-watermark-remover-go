@@ -55,6 +55,19 @@ if !present {
 // outB64 is PNG base64 when present is true
 ```
 
+Byte slice helper (raw image bytes → PNG bytes):
+
+```go
+outBytes, present, score, info, err := watermark.RemoveWatermarkBytes(inBytes)
+if err != nil {
+    // handle error
+}
+if !present {
+    // no visible watermark detected
+}
+// outBytes is PNG bytes when present is true
+```
+
 `DetectWatermarkConfig` follows the original rule set:
 
 - If width > 1024 **and** height > 1024 → 96x96 logo with 64px margins

@@ -17,6 +17,7 @@ import (
 // go run main.go -in image3.jpg -out image3_unwatermarked.png
 // go run main.go -in image4.jpg -out image4_unwatermarked.jpg
 // go run main.go -in image_cleaned.png -out image_cleaned_unwatermarked.png
+// go run main.go -in nowater.jpg --out nowater_unwatermarked.png
 
 func main() {
 	input := flag.String("in", "", "Path to the watermarked image (png/jpg/webp)")

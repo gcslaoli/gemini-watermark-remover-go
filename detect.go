@@ -14,7 +14,7 @@ const (
 	detectionLumaThreshold = 6.0
 	// Correlation gate to ensure the brightness increase matches the expected
 	// watermark shape instead of arbitrary bright content near the corner.
-	detectionCorrelationThreshold = 0.20
+	detectionCorrelationThreshold = 0.30
 )
 
 var detectAlphaCache = struct {
